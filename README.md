@@ -32,10 +32,6 @@ This is a simple **chat application** built using **Node.js** and **MongoDB**. I
 
 ## 📦 Installation & Setup
 ### 1️⃣ Clone the Repository
-```sh
-git clone https://github.com/yourusername/chat-app.git
-cd chat-app
-```
 
 ### 2️⃣ Install Dependencies
 ```sh
