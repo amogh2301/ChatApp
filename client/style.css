@@ -1,0 +1,252 @@
+/* --------------------------------Basic Styling-------------------------------- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    font-family: 'Roboto', sans-serif;
+    height: 100%;
+    background-color: #ecf0f1;
+}
+
+#app-view {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    margin: auto;
+}
+
+/* --------------------------------Navigation Menu-------------------------------- */
+#app-menu {
+    background-color: #2C3E50;
+    color: white;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-item {
+    flex: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-item a {
+    text-decoration: none;
+    padding: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.menu-item img {
+    margin-right: 20px;
+    width: 50px;
+    height: 50px;
+    transition: filter 0.3s ease;
+}
+
+.menu-item span {
+    font-size: 30px;
+}
+
+.menu-item:hover img {
+    /* content: url('./assets/different_chat-box-icon.png');               Implement this later */
+    filter: brightness(1.5);
+}
+
+.menu-item:hover a {
+    color: #FFC436;
+    background-color: #34495E;
+}
+
+/* --------------------------------Page Content-------------------------------- */ 
+#page-view {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+/* --------------------------------Home Styling-------------------------------- */
+.room-list {
+    list-style-type: none;
+}
+
+.room-list li {
+    padding: 10px;
+    border-bottom: 1px solid #D6DBDF;
+    background-color: #FFFFFF;
+    cursor: pointer;
+}
+
+.room-list li:hover {
+    background-color: #D6EAF8;
+}
+
+.room-list li a {
+    text-decoration: none;
+    color: #2C3E50;
+    display: block;
+}
+
+/* --------------------------------Profile Styling-------------------------------- */
+.profile-form {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.form-field {
+    margin-bottom: 10px;
+}
+
+.form-field label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-field input[type="text"],
+.form-field input[type="password"],
+.form-field input[type="file"],
+.form-field textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.form-field textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 100px;
+    resize: vertical;
+}
+
+/* --------------------------------Chat Styling-------------------------------- */
+.room-name {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.message-list {
+    margin-bottom: 20px;
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+.message {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #FFC436;
+    border-radius: 15px;
+    width: fit-content;
+    max-width: 70%;
+}
+
+.my-message {
+    background-color: #3498db;
+    color: white;
+    margin-left: auto;
+    border-radius: 15px;
+    max-width: 70%;
+}
+
+.message-user,
+.my-message-user {
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.message-text,
+.my-message-text {
+    font-size: 16px;
+}
+
+/* --------------------------------Button Styling-------------------------------- */
+button {
+    padding: 10px 15px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* --------------------------------Page Control-------------------------------- */
+.page-control {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30vh;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #2C3E50;
+    color: white;
+}
+
+.page-control input {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+.page-control button {
+    width: 100px;
+}
+
+.page-control-input {
+    flex: 1;
+    margin-right: 10px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.page-control-btn {
+    flex: 0 0 30%; /* 30% of the available space, no growing or shrinking */
+    width: auto;
+    padding: 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.create-room-btn:hover {
+    background-color: #2980b9;
+}
+
+/* --------------------------------Resizing-------------------------------- */
+@media (min-width: 1024px) {
+    #app-view {
+        width: 80%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    #app-view {
+        width: 90%;
+    }
+}
+
+@media (max-width: 767px) {
+    #app-view {
+        width: 100%;
+    }
+}
